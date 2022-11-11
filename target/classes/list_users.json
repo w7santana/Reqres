@@ -1,0 +1,156 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "title": "Root Schema",
+    "type": "object",
+    "default": {},
+    "required": [
+        "page",
+        "per_page",
+        "total",
+        "total_pages",
+        "data"
+    ],
+    "properties": {
+        "page": {
+            "title": "The page Schema",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                2
+            ]
+        },
+        "per_page": {
+            "title": "The per_page Schema",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                6
+            ]
+        },
+        "total": {
+            "title": "The total Schema",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                12
+            ]
+        },
+        "total_pages": {
+            "title": "The total_pages Schema",
+            "type": "integer",
+            "default": 0,
+            "examples": [
+                2
+            ]
+        },
+        "data": {
+            "title": "The data Schema",
+            "type": "array",
+            "default": [],
+            "items": {
+                "title": "A Schema",
+                "type": "object",
+                "required": [
+                    "id",
+                    "email",
+                    "first_name",
+                    "last_name",
+                    "avatar"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "The id Schema",
+                        "type": "integer",
+                        "examples": [
+                            7,
+                            8
+                        ]
+                    },
+                    "email": {
+                        "title": "The email Schema",
+                        "type": "string",
+                        "examples": [
+                            "michael.lawson@reqres.in",
+                            "lindsay.ferguson@reqres.in"
+                        ]
+                    },
+                    "first_name": {
+                        "title": "The first_name Schema",
+                        "type": "string",
+                        "examples": [
+                            "Michael",
+                            "Lindsay"
+                        ]
+                    },
+                    "last_name": {
+                        "title": "The last_name Schema",
+                        "type": "string",
+                        "examples": [
+                            "Lawson",
+                            "Ferguson"
+                        ]
+                    },
+                    "avatar": {
+                        "title": "The avatar Schema",
+                        "type": "string",
+                        "examples": [
+                            "https://reqres.in/img/faces/7-image.jpg",
+                            "https://reqres.in/img/faces/8-image.jpg"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "id": 7,
+                    "email": "michael.lawson@reqres.in",
+                    "first_name": "Michael",
+                    "last_name": "Lawson",
+                    "avatar": "https://reqres.in/img/faces/7-image.jpg"
+                },
+                {
+                    "id": 8,
+                    "email": "lindsay.ferguson@reqres.in",
+                    "first_name": "Lindsay",
+                    "last_name": "Ferguson",
+                    "avatar": "https://reqres.in/img/faces/8-image.jpg"
+                }]
+            },
+            "examples": [
+                [{
+                    "id": 7,
+                    "email": "michael.lawson@reqres.in",
+                    "first_name": "Michael",
+                    "last_name": "Lawson",
+                    "avatar": "https://reqres.in/img/faces/7-image.jpg"
+                },
+                {
+                    "id": 8,
+                    "email": "lindsay.ferguson@reqres.in",
+                    "first_name": "Lindsay",
+                    "last_name": "Ferguson",
+                    "avatar": "https://reqres.in/img/faces/8-image.jpg"
+                }]
+            ]
+        }
+    },
+    "examples": [{
+        "page": 2,
+        "per_page": 6,
+        "total": 12,
+        "total_pages": 2,
+        "data": [{
+            "id": 7,
+            "email": "michael.lawson@reqres.in",
+            "first_name": "Michael",
+            "last_name": "Lawson",
+            "avatar": "https://reqres.in/img/faces/7-image.jpg"
+        },
+        {
+            "id": 8,
+            "email": "lindsay.ferguson@reqres.in",
+            "first_name": "Lindsay",
+            "last_name": "Ferguson",
+            "avatar": "https://reqres.in/img/faces/8-image.jpg"
+        }]
+    }]
+}
